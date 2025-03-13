@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: #253237;
+}
+
+/* Barre de navigation + éléments qui la compose */
+
+.navbarcontainer {
+    position: fixed;
+    width: 100%;
+    height: 5em;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.507);
+    display: flex;
+    justify-content: space-around;
+    z-index: 999;
+}
+#sloganlogo {
+    position: relative;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family:"Kode Mono", monospace;
+}
+.buttoncontainer {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 45em;
+    left: 0%;
+}
+.buttoncontainer > div > button {
+    position: relative;
+    background: none;
+    border: none;
+    width: 15em;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:"Kode Mono", monospace;
+    font-size: 1em;
+    border: solid white;
+}
+.buttoncontainer > div {
+    display: block;
+}
+.buttoncontainer > div > button > h1 {
+    position: absolute;
+    color: white;
+    margin-top: 3.7em;
+    transform: rotate(-90deg);
+}
+
+/* Menus déroulants (liste) */
+
+.buttoncontainer > div > ul {
+    padding: 0;
+    margin: 0.2em 0;
+}
+
+.buttoncontainer > div > ul > div {
+    list-style: none;
+    text-align: center;
+    width: 97.5%;
+    padding: 1em 0;
+    color: white;
+    font-family:"Kode Mono", monospace;
+    border: solid white;
+    font-size: 1em;
+}
+.buttoncontainer > div > ul > div:hover {
+    transform: scale(1.02);
+}
+
+#menus1 {
+    opacity: 0;
+}
+#menus2 {
+    opacity: 0;
+}
+#menus3 {
+    opacity: 0;
+}
+
+/* Sommaire Digitale */
+
+.summarycontainer {
+    position: fixed;
+    display: flex;
+    color: rgb(156, 156, 156);
+    top: 5%;
+    align-items: center;
+    justify-content: center;
+    margin-left: -12.1em;
+    z-index: 999;
+}
+.summarycontainer > ul {
+    padding-left: 0;
+    margin: 0 0;
+    background-color: rgba(128, 128, 128, 0.214);
+    border-radius: 0 20px 20px 0;
+}
+.summarycontainer > ul > div {
+    width: 9em;
+    text-align: center;
+    padding: 1em 1em;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:"Kode Mono";
+}
+.summarycontainer > h1 {
+    transform: scaleX(-1);
+    background-color: rgba(128, 128, 128, 0.227);
+    text-align: center;
+    padding: 1em 0;
+    border-radius: 45px 0 0 45px;
+    color: white;
+}
+
+/* Effet de survole du menus */
+
+.summarycontainer > ul > div:hover {
+    color: white;
+}
+
+
+/* Background intro & Intro Contenus de l'article **/
+
+#testcontainer {
+    position: absolute;
+    height: 100%;
+}
+
+#back {
+    position: relative;
+    z-index: 998;
+    filter: grayscale(10%);
+    width: 100%;
+    top: 0;
+}
+
+#introcontainer {
+    position: absolute;
+    top: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 998;
+    width: 100%;
+    height: 20%;
+
+}
+
+#introtext {
+    position: relative;
+    height: 100%;
+    font-family: 'Roboto';
+    color: white;
+    border-top: solid #253237;
+    border-bottom: solid #253237;
+    display: flex;
+    align-items: center;
+    padding: 0 4em;
+}
+#introimg {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid #253237;
+    border-bottom: solid #253237;
+    padding: 0 4em;
+}
+
+
+
+/* Base de mise en forme des articles */
+
+.part1 {
+    position: relative;
+    background-color: white;
+    border-radius: 30px;
+    width: 69%;
+    height: auto;
+    padding: 0 6em;
+}
+.part1 > h1 {
+    font-family:"Roboto";
+}
+.part1 > hr {
+    width: 5em;
+    height: 0.5em;
+    margin: 1em 0;
+    background-color: #4C5C68;
+    border: none;
+}
+.part1 > hr:nth-child(2) {
+    width: 10em;
+}
+.part1 > h2 {
+    font-family:"Roboto"; 
+    color: #4C5C68;
+}
+.part1 > p {
+    font-family:"Roboto";
+}
+#img0 {
+    width: 100%;
+}
+#img1 {
+    width: 100%;
+}
+
+/* Dispostion générale des articles */
+
+.allcontent {
+    position: absolute;
+    top: 60em;
+    width: 100%;
+    display: block;
+}
+
+/* Différents articles */
+
+.part1container {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#img1 {
+    width: 100%;
+}
+#img1-1 {
+    width: 100%;
+}
+
+
+
+.part2container {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+}
+.part2container > div > hr {
+    color: #A8C686;
+}
+#img2 {
+    width: 100%;
+}
+
+
+.part3container {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+}
+.part4container {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+
+}
+#img4 {
+    width: 100%;
+}
+
+
+
+.part5container {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.part6container {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+
+}
+#img6 {
+    width: 100%;
+}
+
+
+.part7container {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+}
+#img7-1 {
+    width: 100%;
+}
+
+.part8container {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+}
+#img8 {
+    width: 100%;
+}
+
+.part9container {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+}
+#img9 {
+    width: 100%;
+}
+#img9-1 {
+    width: 100%;
+}
+
+.part10container {
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+}

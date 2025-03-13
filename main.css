@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    background-color: rgb(36, 35, 35);
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Name + text anim */
+
+.namecontainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#name {
+    position: absolute;
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 21%;
+    padding: 0em 2em;
+    background-color: #253237;
+    color: #DCDCDD;
+    font-family:"Kode Mono", monospace;
+    font-size: 3em;
+    border: solid 0.09em white;
+    transition: padding 0.3s ease;
+}
+
+/* paragraphe relier à l'animation */
+
+.paragraphe {
+    position: absolute;
+    width: 100%;
+    top: 3em;
+    z-index: 997;
+    color: #DCDCDD;
+    display: none;
+    opacity: 0%;
+    font-size: 0.4em;
+    font-family:"Kode Mono", monospace, solid;
+}
+
+
+
+/* parallélogrammes & image */
+
+#solid1 {
+    position: absolute;
+    z-index: 2;
+    max-width: 60%;
+    min-width: 60%;
+    height: 100.1%;
+    top: -0.3em;
+    left: -10.1%;
+    background-color: #253237;
+    transform: skew(-20deg);
+    border: solid 0.3em white;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transform: scale(0.98) skew(-20deg);
+}
+#solid1 > img {
+    width: 130%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    transform: skew(20deg);
+    transition: opacity 1s ease;
+}
+#solid1:hover > img {
+    display: flex;
+    opacity: 55%;
+}
+#solid1:hover {
+    transform: scale(0.99) skew(-20deg);
+}
+
+
+#solid2 {
+    position: absolute;
+    z-index: 2;
+    max-width: 60%;
+    min-width: 60%;
+    height: 100.1%;
+    top: -0.3em;
+    right: -10.1%;
+    background-color: #253237;
+    transform: skew(-20deg);
+    border: solid 0.3em white;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transform: scale(0.98) skew(-20deg);
+}
+#solid2 > img {
+    width: 130%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    transform: skew(20deg);
+    transition: opacity 1s ease;
+}
+#solid2:hover > img {
+    display: flex;
+    opacity: 55%;
+}
+#solid2:hover {
+    transform: scale(0.99) skew(-20deg);
+}
+
+/* Cathégorie bandeaux */
+
+#solid1 > div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    color: #DCDCDD;
+}
+#solid1 > div > h1 {
+    text-align: end;
+    margin-right: 3em;
+    font-size: 3em;
+    font-family:"Kode Mono", monospace;
+}
+
+
+
+#solid2 > div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    color: #DCDCDD;
+}
+#solid2 > div > h1 {
+    margin-left: 3em;
+    font-size: 3em;
+    font-family:"Kode Mono", monospace;
+}
+
+
+
+
+
+
+
+
+
+/* Media query téléphone (de la largeur 0px à 557px) */
+
+@media screen and (max-width: 557px) {
+
+    .namecontainer {
+        position: absolute;
+        width: 100%;
+        margin: 0;
+    }
+    .name {
+        position: absolute;
+        z-index: 998;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 21%;
+        padding: 0 12%;
+        background-color: #4C5C68;
+        color: #DCDCDD;
+        font-family:"Kode Mono", monospace;
+        font-size: 3em;
+        border: solid 0.09em white;
+        transition: padding 0.3s ease;
+    }
+
+
+    #solid1 {
+        position: absolute;
+        min-width: 100%;
+        top: 0;
+        left: 0;
+        transform: skew(0deg);
+        height: 50%;
+        left: 0%;
+        border: solid 0em white;
+    }
+    #solid1 > img {
+        width: 100%;
+        transform: skew(0deg);
+    }
+    #solid1:hover {
+        transform: scale(0.99) skew(0deg);
+    }
+
+
+    #solid2 {
+        position: absolute;
+        min-width: 100%;
+        top: 50%; /* à revoir ? */
+        bottom: 0;
+        right: 0;
+        transform: skew(0deg);
+        height: 50%;
+        right: 0%;
+        border: solid 0em white;
+    }
+    #solid2 > img {
+        width: 100%;
+        transform: skew(0deg);
+    }
+    #solid2:hover {
+        transform: scale(0.99) skew(0deg);
+    }
+
+   
+    
+
+    
+}
+
+/* Media query écran pc classique avec une largeur minimum de 557px et max 1090px */
+
+@media screen and (max-width: 1090px) and (min-width: 557px) {
+
+    #solid1 {
+        width: 67%;
+        height: 100%;
+        left: -20%;
+        max-width: 69%;
+        min-width: 69%;
+    }
+
+    #solid2 {
+        width: 67%;
+        height: 100%;
+        right: -20%;
+        max-width: 69%;
+        min-width: 69%;
+    }
+    
+
+    #solid1 > div > h1 {
+        margin-right: 1.5em;
+        font-size: 2.6em;
+    }
+    #solid2 > div > h1 {
+        margin-left: 1.5em;
+        font-size: 2.6em;
+    }
+
+    
+
+    
+}
+

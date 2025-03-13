@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: rgb(36, 35, 35);
+}
+
+/* Barre de navigation */  
+
+.navbarmenus {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    font-family:"Kode Mono", monospace; 
+    z-index: 999;
+}
+
+.navbarmenus__part1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #253237;
+    color: white;
+    height: 100vh;
+    border-right: solid 0.2em white; 
+    border-left: solid 0.2em white;
+    border-bottom: solid 0.35em white;
+    transform: skewY(-45deg) translateZ(0);
+    margin-top: -4.5em;
+}
+
+.navbarmenus__part1 > div:first-child {
+    margin: 4.5em 0;
+    padding: 1em 1em;
+    width: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skewY(45deg);
+    border-bottom: solid 0.25em white;
+    
+}
+
+.navbarmenus__button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4.1em;
+    transform: skewY(45deg);
+}
+
+.navbarmenus__button > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5em 0;
+}
+
+.navbarmenus__button > div > img {
+    width: 3em;
+    margin: 0.5em 0;
+}
+
+
+/* couleurs hover */
+
+#bouton1:hover {
+    color: rgb(75, 195, 75);
+    border-bottom: solid 0.35em rgb(75, 195, 75);
+    margin-bottom: -0.30em;
+}
+
+#bouton2:hover {
+    color: rgb(211, 151, 53);
+    border-bottom: solid 0.35em rgb(211, 151, 53);
+    margin-bottom: -0.30em;
+}
+
+#bouton3:hover {
+    color: #4897e1;
+    border-bottom: solid 0.35em #4897e1;
+    margin-bottom: -0.30em;
+}
+
+/* Menu déroulant */
+
+.container__menus {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 998;
+    font-family:"Kode Mono", monospace;
+    display: none;
+}
+#back-menu {
+    background: rgba(68, 68, 68, 0.74);
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(15px);
+    display: none;
+    opacity: 0;
+}
+
+.menu1 {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 15em);
+    grid-template-rows: repeat(1, 15em);
+    gap: 1em;
+    margin-right: -300vw;
+}
+.menu1 > button {
+    all: unset;
+    background-color: #253237;
+    cursor: pointer;
+    color: white;
+    border: 0.2em solid white;
+    padding: 1em;
+}
+
+.menu2 {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 15em);
+    grid-template-rows: repeat(1, 15em);
+    gap: 1em;
+    margin-right: -300vw;
+}
+.menu2 > button {
+    all: unset;
+    background-color: #253237;
+    cursor: pointer;
+    color: white;
+    border: 0.2em solid white;
+    padding: 1em;
+}
+
+
+
+/* Contenu de page */
+
+.contentpage {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 997;
+}
+
+
+.intro_container {
+    width: 100%;
+    height: auto;
+    border-bottom: 0.2em solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/mairie.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.intro__text {
+    width: 50vw;
+    height: auto;
+    padding: 1em 2em;
+    margin-top: 4em;
+    color: white;
+    font-family: "Roboto"; 
+    border-bottom: 0.2em solid white;
+    border-top: 0.2em solid white;
+}
+
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50vw;
+    padding-top: 4em;
+    padding-bottom: 2em;
+}
+.logos > img {
+    width: 15vw;
+    height: 15vh;
+    border-radius: 15px;
+}
+
+
+/*Style zone de text*/
+
+.style1container {
+    margin-top: 8vh;
+    z-index: 998;
+    max-width: 75vw;
+    display: flex;
+    justify-content: center;
+}
+
+.part1 {
+    position: relative;
+    background-color: white;
+    border-radius: 30px;
+    width: 69%;
+    height: auto;
+    padding: 0 8%;
+}
+.part1 > h1 {
+    font-family:"Roboto";
+}
+.part1 > hr {
+    width: 5em;
+    height: 0.5em;
+    margin: 1em 0;
+    background-color: #4C5C68;
+    border: none;
+}
+.part1 > hr:nth-child(2) {
+    width: 10em;
+}
+.part1 > h2 {
+    font-family:"Roboto"; 
+    color: #4C5C68;
+}
+.part1 > p {
+    font-family:"Roboto";
+}
+
+.part1 > ul {
+    font-family:"Roboto";
+}
+
+.images-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 40%);
+    grid-template-rows: repeat(1, 40%);
+    gap: 1em;
+}
+.images-3 > img {
+    margin-top: 2em;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* Style zone de texte n°2 */
+
+.style2container {
+    margin-top: 8vh;
+    z-index: 998;
+    max-width: 75vw;
+    display: flex;
+    justify-content: center;
+}
+
+.part1 > h1, .part1 > h2, .part1 > p {
+    font-family: "Roboto";
+}
+
+.part1 > hr:nth-child(2) {
+    width: 10em;
+}
+
+.part1 > h2 {
+    color: #4C5C68;
+}
+
+.content-row {
+    display: flex;
+    align-items: flex-start; /* Aligne l'image et le texte en haut */
+    gap: 2em;
+    margin-top: 20px;
+}
+
+.content-row p {
+    flex: 1; /* Le paragraphe prend l'espace restant */
+    text-align: justify;
+    font-family: "Roboto";
+}
+
+.content-row img {
+    max-width: 35%; /* Réduit un peu la taille pour un meilleur équilibre */
+    min-width: 20vw;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 3em;
+    margin-top: -3em;
+}
+
+
+.contentpage > div:nth-child(4) > div > div.content-row > img {
+    margin-top: 1em;
+    margin-left: 0em;
+}
+
+
+/* Affichages step & icons */
+
+
+.cat-icons {
+    display: flex;
+    align-items: center;
+}
+.cat-icons > img {
+    width: 10%;
+}
+
+
+
+/* Media query téléphone (de la largeur 0px à 557px) */
+
+@media screen and (max-width: 650px) {
+
+    /* Navigation bar passé en haut */
+
+    .navbarmenus__part1 {
+        position: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: auto;
+        right: 0;
+        left: 0;
+        border-right: solid 0.35em white; 
+        border-left: solid 0.35em white;
+        border-bottom: solid 0.35em white;
+        transform: skewY(0deg) translateZ(0);
+        margin-top: 0em;
+
+    }
+
+    .navbarmenus__part1 > div:first-child {
+        margin: 0 0;
+        padding: 0 1em;
+        transform: skewY(0deg);
+        border-bottom: none;
+        border-right: solid 0.35em white;
+        
+    }
+    
+    .navbarmenus__button {
+        flex-direction: row;
+        margin-bottom: 0em;
+        transform: skewY(0deg);
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .navbarmenus__button > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 0;
+    }
+    
+    .navbarmenus__button > div > img {
+        width: 3em;
+        margin: 0.5em 0;
+    }
+
+    /* Adaptation styles des différents articles */
+
+    .style1container {
+        max-width: 100vw;
+    }
+    .style2container {
+        max-width: 100vw;
+    }
+
+
+    .content-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-row img {
+        margin-top: -1em;
+        max-width: 70%;
+        margin-top: -1em;
+        margin-bottom: 1em;
+        margin-left: 0;
+    }
+
+
+
+
+    /* Adaptation boutons des menus */
+
+    .menu1 {
+        grid-template-columns: repeat(1, 60vw);
+        grid-template-rows: repeat(4, 30vw);
+    }
+
+    .menu2 {
+        grid-template-columns: repeat(1, 60vw);
+        grid-template-rows: repeat(4, 30vw);
+    }
+
+
+    
+}
+
+/* Media query intermédiaire PC & téléphone */
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+
+    .style2container > div > div {
+        display: flex;
+        flex-direction: column;
+    }
+    .style2container > div > div > img {
+        margin-left: 0;
+    }
+
+
+
+    .content-row img {
+        margin-top: -1em;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* Media query écran pc classique avec une largeur minimum de 557px et max 1090px */
+
+@media screen and (max-width: 1090px) and (min-width: 650px) {
+
+    
+    
+}
+
+/* Media query écran avec une largeur supérieur à 1090px Pas utile dans mon cas*/
+
+@media  screen and (min-width: 1090px) {
+    
+    
+    
+}

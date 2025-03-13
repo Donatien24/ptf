@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: rgb(36, 35, 35);
+}
+
+/* Barre de navigation */  
+
+.navbarmenus {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    font-family:"Kode Mono", monospace; 
+    z-index: 999;
+}
+
+.navbarmenus__part1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #253237;
+    background-color: linear-gradient(to top, #253237, #28393f, #2a3f48, #2d4650, #2f4d59);
+    color: white;
+    height: 100vh;
+    border-right: solid 0.2em white; 
+    border-left: solid 0.2em white;
+    border-bottom: solid 0.35em white;
+    transform: skewY(-45deg) translateZ(0);
+    margin-top: -4.5em;
+}
+
+.navbarmenus__part1 > div:first-child {
+    margin: 4.5em 0;
+    padding: 1em 1em;
+    width: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skewY(45deg);
+    border-bottom: solid 0.25em white;  
+}
+
+.navbarmenus__button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4.1em;
+    transform: skewY(45deg);
+}
+
+.navbarmenus__button > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5em 0;
+}
+
+.navbarmenus__button > div > img {
+    width: 3em;
+    margin: 0.5em 0;
+}
+
+
+/* couleurs hover */
+
+#bouton1:hover {
+    color: rgb(75, 195, 75);
+    border-bottom: solid 0.35em rgb(75, 195, 75);
+    margin-bottom: -0.30em;
+}
+
+#bouton2:hover {
+    color: rgb(211, 151, 53);
+    border-bottom: solid 0.35em rgb(211, 151, 53);
+    margin-bottom: -0.30em;
+}
+
+#bouton3:hover {
+    color: #4897e1;
+    border-bottom: solid 0.35em #4897e1;
+    margin-bottom: -0.30em;
+}
+
+/* Contenu de la page */
+
+.contentpage {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 997;
+}
+
+/* Photo + Nom Prénon */
+
+.top_container {
+    position: relative;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.301);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em 0;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); 
+}
+.top_container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9em;
+    width: 60%;
+}
+
+#photo > img {
+    position: relative;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 50%;  
+    border: solid white;
+}
+
+#photo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16%;
+    height: 100%;
+}
+
+#name {
+    display: flex;
+    color: white;
+    font-family: "Roboto";
+    font-size: 2em; 
+}
+#name > p {
+    margin: 0;
+}
+#name > p:nth-child(1) {
+    margin-right: 0.3em;
+}
+
+/* Text + diplômes */
+
+.container_2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 4em;
+}
+.container_2 > div {
+    display: flex;
+    padding: 0 9em;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.diplomes {
+    color: white;
+    font-family: "Roboto";
+    display: inline-flex;
+}
+
+#line {
+    position: relative;
+    background-color: white;
+    width: 0.3em;
+    height: 100%;
+}
+.points {
+    display: flex;
+}
+.points > div > h2 {
+    margin: 0;
+}
+.points > div:nth-child(1) {
+    background-color: white;
+    height: 50%;
+    padding: 0.9em 0.9em;
+    border-radius: 50%;
+    margin-right: 1.5em;
+    margin-left: -1.0355em;
+}
+
+.intro_text {
+    color: white;
+    width: 40em;
+    font-family: "Roboto";
+}
+
+.intro_text > p {
+    margin: 0;
+    margin-right: 3em;
+}
+
+
+    /* Mes points forts */
+
+    .container_3 {
+        margin-top: 7em;
+        width: 60%;
+        color: white;
+        font-family: "Roboto";
+        border-top: solid white;
+        border-bottom: solid white;
+        padding: 1.2em 0em;
+    }
+
+    .container_3 > div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+    .container_3 > div > img {
+        width: 49%;
+        border-radius: 30px;
+    }
+
+
+
+
+/* Media query téléphone (de la largeur 0px à 557px) */
+
+@media screen and (max-width: 650px) {
+
+    /* Navigation bar passé en haut */
+
+    .navbarmenus__part1 {
+        position: inherit;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        right: 0;
+        left: 0;
+        border-right: solid 0.35em white; 
+        border-left: solid 0.35em white;
+        border-bottom: solid 0.35em white;
+        transform: skewY(0deg) translateZ(0);
+        margin-top: 0em;
+
+    }
+
+    .navbarmenus__part1 > div:first-child {
+        margin: 0 0;
+        padding: 0 1em;
+        transform: skewY(0deg);
+        border-bottom: none;
+        border-right: solid 0.35em white;
+        
+    }
+    
+    .navbarmenus__button {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 0em;
+        transform: skewY(0deg);
+        width: 100%;
+    }
+    
+    .navbarmenus__button > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        padding: 0 0;
+    }
+    
+    .navbarmenus__button > div > img {
+        width: 3em;
+        margin: 0.5em 0;
+    }
+
+
+    /* Photo + Nom */
+
+    .top_container {
+        padding-top: 10em;
+    }
+
+    .top_container > div {
+        justify-content: space-evenly;
+        padding: 0;
+        width: 100%;
+    }
+
+    #photo > img {
+        position: relative;
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    #photo {
+        width: 25%;
+    }
+    
+    #name {
+        flex-direction: column;
+        font-size: 2em;
+    }
+
+
+    /* Container2 text de présentation + diplômes */
+
+    .container_2 > div {
+        flex-direction: column;
+        padding: 0 0em;
+        width: 80%;
+    }
+    
+    .intro_text > p {
+        margin: 0;
+    }
+
+    .intro_text {
+        width: 100%;
+    }
+    .diplomes {
+        margin-top: 3em;
+    }
+
+    /* Projet pro + Certifications */
+
+    .container_3 {
+        width: 80%;
+    }
+
+
+    .container_3 > div {
+        display: block;
+        justify-content: space-between;
+    }
+    .container_3 > div > img {
+        width: 100%;
+        border-radius: 30px;
+        margin-bottom: 1em;
+    }
+        
+    
+
+
+    
+}
+
+/* Media query écran pc classique avec une largeur minimum de 557px et max 1090px */
+
+@media screen and (max-width: 1090px) and (min-width: 650px) {
+
+    
+    
+}
+
