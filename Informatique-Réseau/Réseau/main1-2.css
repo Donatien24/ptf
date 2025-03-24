@@ -110,7 +110,7 @@ html {
 .menu1 {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(3, 15em);
+    grid-template-columns: repeat(2, 15em);
     grid-template-rows: repeat(1, 15em);
     gap: 1em;
     margin-right: -300vw;

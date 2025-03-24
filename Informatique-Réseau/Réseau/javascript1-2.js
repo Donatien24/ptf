@@ -525,3 +525,11 @@ $("#contextAP").click(function(){
 $("#").click(function(){
   window.location.replace("./articles/art1AP/art1GSB.html");
 });
+
+$("#stage1").click(function(){
+  window.location.replace("Stages/Stage-Éolane/art2Eolane.html");
+});
+
+$("#stage2").click(function(){
+  window.location.replace("Stages/Mairie-Trélazé/art2MairieTrelaze.html");
+});
