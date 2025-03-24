@@ -422,7 +422,7 @@ $("#projetR").click(function(){
 });
 
 $("#stage1").click(function(){
-  window.location.replace("Stages/Stage-Éolane/art2Eolane.html");
+  window.location.replace("Stages/Stage-Eolane/art2Eolane.html");
 });
 
 $("#stage2").click(function(){

@@ -322,7 +322,7 @@ $(document).ready(function() {
 
 
 
-
+/*
 
 
   let tableauart = ['articles/RéalisationBlog.html','articles/BDDgestionincident.html','articles/ServiceNextcloud.html','articles/PropositionInfraRéseau.html','articles/CasTamaran.html']
@@ -416,7 +416,7 @@ $(document).ready(function() {
         }
 
       })
-
+ */
 
     
 
@@ -527,7 +527,7 @@ $("#").click(function(){
 });
 
 $("#stage1").click(function(){
-  window.location.replace("Stages/Stage-Éolane/art2Eolane.html");
+  window.location.replace("/Stages/Stage-Éolane/art2Eolane.html");
 });
 
 $("#stage2").click(function(){
